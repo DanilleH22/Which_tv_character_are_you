@@ -1,10 +1,7 @@
 import gspread
 import random
 
-a_answer = 0
-b_answer = 0
-c_answer = 0
-d_answer = 0
+
 
 """
 Questions to ask user to determine personality
@@ -114,7 +111,10 @@ def question_answer(questions_dict):
     for answer in questions_dict["answers"]:
         print(answer)
 
-
+a_answer = []
+b_answer = []
+c_answer = []
+d_answer = []
 
 def check_answer():
     """
@@ -123,23 +123,19 @@ def check_answer():
     """
     user_answer = input("Enter your answer (A, B, C, or D): ").lower()
 
-    
-    if user_answer == 'a':
-        global a_answer
-        a_answer += 1
-        print(a_answer)
-    elif user_answer == 'b':
-        global b_answer
-        b_answer += 1
-        print(b_answer)
-    elif user_answer == 'c':
-        global c_answer
-        c_answer += 1
-        print(c_answer)
-    elif user_answer == 'd':
-        global d_answer
-        d_answer += 1
-        print(d_answer)
+    if user_answer in ['a', 'b', 'c', 'd']:
+        if a_answer == 'a':
+            a_answer += 1
+            print(a_answer)
+        elif b_answer == 'b':
+            b_answer += 1
+            print(b_answer)
+        elif c_answer == 'c':
+            c_answer += 1
+            print(c_answer)
+        elif d_answer == 'd':
+            d_answer += 1
+            print(d_answer)
     else:
         print("please type either: a, b, c, d")
 
