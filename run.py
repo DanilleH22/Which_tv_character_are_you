@@ -8,6 +8,9 @@ c_answer = 0
 d_answer = 0
 
 def welcome_message():
+    """
+    Collects players name and welcomes them to the quiz.
+    """
     print("Welcome to the quiz. This quiz is to tell you which South Park character you are")
     named = input("To begin, please enter your name:")
     print(f"Welcome {named}.")
@@ -19,93 +22,93 @@ Questions to ask user to determine personality
 """
 questions = [
     {
-        "question": "What is your ideal weekend activity?",
+        "question": "What's your sense of humor like?",
         "answers": [
-            "a. Binge-watching a new TV series or movie",
-            "b. Going on an outdoor adventure",
-            "c. Attending a social event or party",
-            "d. Exploring new art galleries and exhibitions"
+            "a. Dark and cynical",
+            "b. Sarcastic and witty",
+            "c. Outrageously absurd",
+            "d. Innocently naive"
         ]
     },
     {
-        "question": "How do you handle stress?",
+        "question": "How do you handle conflicts with friends?",
         "answers": [
-            "a. I prefer to meditate and practice mindfulness",
-            "b. I take action and tackle the source of stress head-on",
-            "c. I rely on the support and advice of friends and family",
-            "d. I express myself through creative outlets like writing or painting"
+            "a. Manipulate and scheme",
+            "b. Be the voice of reason",
+            "c. Get caught up in ridiculous adventures",
+            "d. Try to keep the peace"
         ]
     },
     {
-        "question": "Choose a favorite fictional world:",
+        "question": "Choose a favorite activity during recess:",
         "answers": [
-            "a. Middle-earth (The Lord of the Rings)",
-            "b. The Wizarding World (Harry Potter)",
-            "c. Westeros (Game of Thrones)",
-            "d. The Marvel Cinematic Universe (MCU)"
+            "a. Prank others",
+            "b. Play sports or games",
+            "c. Start a bizarre trend",
+            "d. Daydream and imagine fantastical scenarios"
         ]
     },
     {
-        "question": "What's your go-to social media platform?",
+        "question": "What's your attitude towards authority figures?",
         "answers": [
-            "a. Instagram",
-            "b. Twitter",
-            "c. Facebook",
-            "d. TikTok"
+            "a. Defy and challenge them",
+            "b. Respect and obey them",
+            "c. Embarrass or mock them",
+            "d. Try to please and impress them"
         ]
     },
     {
-        "question": "Pick a superpower:",
+        "question": "What's your favorite school subject?",
         "answers": [
-            "a. Invisibility",
-            "b. Super strength",
-            "c. Mind reading",
-            "d. Time manipulation"
+            "a. None, I hate school",
+            "b. Science or math",
+            "c. Social studies or current events",
+            "d. Art or creative writing "
         ]
     },
     {
-        "question": "Which genre of music resonates with you the most?",
+        "question": "How do you react to bizarre or supernatural situations?",
         "answers": [
-            "a. Pop",
-            "b. Rock",
-            "c. Hip-hop/Rap",
-            "d. Indie/Alternative"
+            "a. Embrace them with excitement",
+            "b. Investigate them logically",
+            "c. Act like a conspiracy theorist",
+            "d. Get easily scared and confused"
         ]
     },
     {
-        "question": "How do you approach problem-solving?",
+        "question": "What's your favorite type of humor?",
         "answers": [
-            "a. Careful planning and analysis",
-            "b. Trusting my instincts and taking risks",
-            "c. Seeking advice and input from others",
-            "d. Thinking outside the box and embracing creativity"
+            "a. Offensive and shock humor",
+            "b. Satirical and observational humor",
+            "c. Absurdist and surreal humor",
+            "d. Innocent and slapstick humor"
         ]
     },
     {
-        "question": "What's your ideal vacation destination?",
+        "question": "Choose a hobby:",
         "answers": [
-            "a. A serene beach resort",
-            "b. A bustling city with lots to explore",
-            "c. A remote mountain cabin",
-            "d. A culturally rich and historic town"
+            "a. Collecting and trading items",
+            "b. Playing music or an instrument",
+            "c. Engaging in strange and quirky hobbies ",
+            "d. Doing arts and crafts"
         ]
     },
     {
-        "question": "What's your favorite way to spend a rainy day?",
+        "question": "What's your approach to problem-solving?",
         "answers": [
-            "a. Reading a good book or watching a movie",
-            "b. Going for a long drive or walk",
-            "c. Hosting a game night with friends",
-            "d. Trying out new recipes and cooking"
+            "a. Manipulate and deceive others",
+            "b. Think logically and rationally",
+            "c. Make impulsive and questionable decisions",
+            "d. Try to follow rules and guidelines"
         ]
     },
     {
-        "question": "When it comes to fashion, which style do you prefer?",
+        "question": "Choose a role in a group project:",
         "answers": [
-            "a. Classic and timeless",
-            "b. Edgy and bold",
-            "c. Trendy and fashionable",
-            "d. Eclectic and unique"
+            "a. The bossy leader",
+            "b. The dependable team player",
+            "c. The wildcard who suggests crazy ideas",
+            "d. The eager helper who follows instructions"
         ]
     }
 ]
