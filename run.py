@@ -167,13 +167,13 @@ def calculate_personality():
     Prints name if certain answers were collected.
     """
     if (a_answer > b_answer, c_answer, d_answer):
-        print("You are Cam")
+        print(f"{name}, based on your results, you are Eric Cartman")
     elif (b_answer > a_answer, c_answer, d_answer):
-        print("You are Hayley")
+        print(f"{name}, based on your results, you are Stan Marsh")
     elif (c_answer > b_answer, a_answer, d_answer):
-        print("You are Claire")
+        print(f"{name}, based on your results, you are Randy Marsh")
     elif (d_answer > b_answer, c_answer, a_answer):
-        print("You are Mitchell")
+        print(f"{name}, based on your results, you are Butters Stotch")
 
 
 for x in range(5):
