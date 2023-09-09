@@ -1,5 +1,6 @@
 import gspread
 import random
+from itertools import repeat
 
 a_answer = 0
 b_answer = 0
@@ -119,34 +120,37 @@ def question_answer(questions_dict):
 def check_answer():
     """
     collects answer from the user, and checks if it is
-    either a,b,c,d
+    either a,b,c,d and gives a point
     """
-    user_answer = input("Enter your answer (A, B, C, or D): ").lower()
-
-    
+    user_answer = input("\n Enter your answer (A, B, C, or D): ").lower()
+        
     if user_answer == 'a':
         global a_answer
         a_answer += 1
         print(a_answer)
     elif user_answer == 'b':
         global b_answer
-        b_answer += 1
+        b_answer += 2
         print(b_answer)
     elif user_answer == 'c':
         global c_answer
-        c_answer += 1
+        c_answer += 3
         print(c_answer)
     elif user_answer == 'd':
         global d_answer
-        d_answer += 1
+        d_answer += 4
         print(d_answer)
     else:
-        print("please type either: a, b, c, d")
+        print("please only type either: a, b, c, d")
+
 
 
 def main_function():
     random_question = random.choice(questions)
     question_answer(random_question)
     check_answer()
-    
-main_function()
+
+for x in range(6):  
+    main_function()
+    print("you have compleeted the quiz, loading your personality type")
+
