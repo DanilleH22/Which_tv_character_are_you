@@ -7,15 +7,15 @@ b_answer = 0
 c_answer = 0
 d_answer = 0
 
-def welcome_message():
-    """
-    Collects players name and welcomes them to the quiz.
-    """
-    print("Welcome to the quiz. This quiz is to tell you which South Park character you are")
-    named = input("To begin, please enter your name:")
-    print(f"Welcome {named}.")
 
-welcome_message()
+"""
+Collects players name and welcomes them to the quiz.
+"""
+print("Welcome to the quiz. This quiz is to tell you which South Park character you are")
+named = input("To begin, please enter your name: ")
+print(f"Welcome {named}.")
+
+
 
 """
 Questions to ask user to determine personality
@@ -116,12 +116,9 @@ questions = [
 
 def question_answer(questions_dict):
     """
-    Prints the question
+    Prints the questions and answer
     """
     print(questions_dict["question"])
-    """
-    Prints question answer
-    """
     for answer in questions_dict["answers"]:
         print(answer)
 
@@ -131,7 +128,7 @@ def check_answer():
     collects answer from the user, and checks if it is
     either a,b,c,d and gives a point
     """
-    user_answer = input("\n Enter your answer (A, B, C, or D): ").lower()
+    user_answer = input("\n Enter your answer (a, b, c, or d): ").lower()
     if user_answer == 'a':
         global a_answer
         a_answer += 1
@@ -154,7 +151,8 @@ def check_answer():
 
 def main_function():
     """
-    Chooses random questions and answer to ask.
+    Chooses random questions and answer to ask and uses checkanswer function
+    to see how many points to give.
     """
     random_question = random.choice(questions)
     question_answer(random_question)
@@ -167,18 +165,18 @@ def calculate_personality():
     Prints name if certain answers were collected.
     """
     if (a_answer > b_answer, c_answer, d_answer):
-        print(f"{name}, based on your results, you are Eric Cartman")
+        print(f"{named}, based on your results, you are Eric Cartman")
     elif (b_answer > a_answer, c_answer, d_answer):
-        print(f"{name}, based on your results, you are Stan Marsh")
+        print(f"{named}, based on your results, you are Stan Marsh")
     elif (c_answer > b_answer, a_answer, d_answer):
-        print(f"{name}, based on your results, you are Randy Marsh")
+        print(f"{named}, based on your results, you are Randy Marsh")
     elif (d_answer > b_answer, c_answer, a_answer):
-        print(f"{name}, based on your results, you are Butters Stotch")
+        print(f"{named}, based on your results, you are Butters Stotch")
 
 
 for x in range(5):
     """
-    Prints 5 questions to ask before printing personality type
+    Prints 5 questions and answer to ask before printing personality type
     """
     main_function()
 
