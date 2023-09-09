@@ -18,9 +18,6 @@ if named.isalpha() is False:
     sys.exit()
 else:
     print(f"\nWelcome {named}.\n")
-       
- 
-
 
 
 """
@@ -128,6 +125,7 @@ def question_answer(questions_dict):
     for answer in questions_dict["answers"]:
         print(answer)
 
+
 def check_answer():
     """
     collects answer from the user, and checks if it is
@@ -158,6 +156,7 @@ def check_answer():
             d_answer += 4
         else:
             print("\nInvalid input.\n")
+
 
 def main_function():
     """
