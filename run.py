@@ -7,6 +7,13 @@ b_answer = 0
 c_answer = 0
 d_answer = 0
 
+def welcome_message():
+    print("Welcome to the quiz. This quiz is to tell you which South Park character you are")
+    named = input("To begin, please enter your name:")
+    print(f"Welcome {named}.")
+
+welcome_message()
+
 """
 Questions to ask user to determine personality
 """
@@ -116,14 +123,12 @@ def question_answer(questions_dict):
         print(answer)
 
 
-
 def check_answer():
     """
     collects answer from the user, and checks if it is
     either a,b,c,d and gives a point
     """
     user_answer = input("\n Enter your answer (A, B, C, or D): ").lower()
-        
     if user_answer == 'a':
         global a_answer
         a_answer += 1
@@ -144,7 +149,6 @@ def check_answer():
         print("please only type either: a, b, c, d")
 
 
-
 def main_function():
     """
     Chooses random questions and answer to ask.
@@ -159,23 +163,21 @@ def calculate_personality():
     Checks total score to decide which character they are.
     Prints name if certain answers were collected.
     """
-    if a_answer > b_answer and a_answer > c_answer and a_answer > d_answer:
+    if (a_answer > b_answer, c_answer, d_answer):
         print("You are Cam")
-    if b_answer > a_answer and b_answer > c_answer and b_answer > d_answer:
+    elif (b_answer > a_answer, c_answer, d_answer):
         print("You are Hayley")
-    if c_answer > b_answer and c_answer > c_answer and c_answer > d_answer:
+    elif (c_answer > b_answer, a_answer, d_answer):
         print("You are Claire")
-    if d_answer > b_answer and d_answer > c_answer and d_answer > a_answer:
+    elif (d_answer > b_answer, c_answer, a_answer):
         print("You are Mitchell")
 
-for x in range(5):  
+
+for x in range(5):
     """
     Prints 5 questions to ask before printing personality type
     """
     main_function()
-    print("you have compleeted the quiz, loading your personality type")
-    calculate_personality()
 
-
-
-
+print("Congrats, you have completed the quiz!")
+calculate_personality()
