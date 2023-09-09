@@ -146,11 +146,36 @@ def check_answer():
 
 
 def main_function():
+    """
+    Chooses random questions and answer to ask.
+    """
     random_question = random.choice(questions)
     question_answer(random_question)
     check_answer()
 
-for x in range(6):  
+
+def calculate_personality():
+    """
+    Checks total score to decide which character they are.
+    Prints name if certain answers were collected.
+    """
+    if a_answer > b_answer and a_answer > c_answer and a_answer > d_answer:
+        print("You are Cam")
+    if b_answer > a_answer and b_answer > c_answer and b_answer > d_answer:
+        print("You are Hayley")
+    if c_answer > b_answer and c_answer > c_answer and c_answer > d_answer:
+        print("You are Claire")
+    if d_answer > b_answer and d_answer > c_answer and d_answer > a_answer:
+        print("You are Mitchell")
+
+for x in range(5):  
+    """
+    Prints 5 questions to ask before printing personality type
+    """
     main_function()
     print("you have compleeted the quiz, loading your personality type")
+    calculate_personality()
+
+
+
 
