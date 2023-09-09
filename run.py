@@ -1,6 +1,6 @@
 import gspread
 import random
-from itertools import repeat
+import sys
 
 a_answer = 0
 b_answer = 0
@@ -13,7 +13,13 @@ Collects players name and welcomes them to the quiz.
 """
 print("Welcome to the quiz. This quiz is to tell you which South Park character you are\n")
 named = input("To begin, please enter your name: ")
-print(f"\nWelcome {named}.\n")
+if named.isalpha() is False:
+    print("Invalid, only letters are allowed!")
+    sys.exit()
+else:
+    print(f"\nWelcome {named}.\n")
+       
+ 
 
 
 
