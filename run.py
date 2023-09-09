@@ -11,9 +11,9 @@ d_answer = 0
 """
 Collects players name and welcomes them to the quiz.
 """
-print("Welcome to the quiz. This quiz is to tell you which South Park character you are")
+print("Welcome to the quiz. This quiz is to tell you which South Park character you are\n")
 named = input("To begin, please enter your name: ")
-print(f"Welcome {named}.")
+print(f"\nWelcome {named}.\n")
 
 
 
@@ -122,32 +122,36 @@ def question_answer(questions_dict):
     for answer in questions_dict["answers"]:
         print(answer)
 
-
 def check_answer():
     """
     collects answer from the user, and checks if it is
     either a,b,c,d and gives a point
     """
-    user_answer = input("\n Enter your answer (a, b, c, or d): ").lower()
+    user_answer = input("\nEnter your answer (a, b, c, or d): ").lower()
     if user_answer == 'a':
         global a_answer
         a_answer += 1
-        print(a_answer)
     elif user_answer == 'b':
         global b_answer
         b_answer += 2
-        print(b_answer)
     elif user_answer == 'c':
         global c_answer
         c_answer += 3
-        print(c_answer)
     elif user_answer == 'd':
         global d_answer
         d_answer += 4
-        print(d_answer)
     else:
-        print("please only type either: a, b, c, d")
-
+        input("\nInvalid input. Please only type either a, b, c, or d: ")
+        if user_answer == 'a':
+            a_answer += 1
+        elif user_answer == 'b':
+            b_answer += 2
+        elif user_answer == 'c':
+            c_answer += 3
+        elif user_answer == 'd':
+            d_answer += 4
+        else:
+            print("\nInvalid input.\n")
 
 def main_function():
     """
@@ -164,14 +168,16 @@ def calculate_personality():
     Checks total score to decide which character they are.
     Prints name if certain answers were collected.
     """
-    if (a_answer > b_answer, c_answer, d_answer):
-        print(f"{named}, based on your results, you are Eric Cartman")
-    elif (b_answer > a_answer, c_answer, d_answer):
-        print(f"{named}, based on your results, you are Stan Marsh")
-    elif (c_answer > b_answer, a_answer, d_answer):
-        print(f"{named}, based on your results, you are Randy Marsh")
-    elif (d_answer > b_answer, c_answer, a_answer):
-        print(f"{named}, based on your results, you are Butters Stotch")
+    if a_answer > b_answer and a_answer > c_answer and a_answer > d_answer:
+        print(f"{named}, based on your results, you are Eric Cartman.")
+    elif b_answer > a_answer and b_answer > c_answer and b_answer > d_answer:
+        print(f"{named}, based on your results, you are Stan Marsh.")
+    elif c_answer > a_answer and c_answer > b_answer and c_answer > d_answer:
+        print(f"{named}, based on your results, you are Randy Marsh.")
+    elif d_answer > a_answer and d_answer > b_answer and d_answer > c_answer:
+        print(f"{named}, based on your results, you are Butters Stotch.")
+    else:
+        print("You have not entered the appropriate answers, please try again.")
 
 
 for x in range(5):
@@ -180,5 +186,5 @@ for x in range(5):
     """
     main_function()
 
-print("Congrats, you have completed the quiz!")
+# remove: print("Congrats, you have completed the quiz!\n")
 calculate_personality()
