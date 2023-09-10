@@ -272,9 +272,9 @@ def calculate_personality():
     elif b_answer > a_answer and b_answer > c_answer and b_answer > d_answer:
         print(f"{named}, based on your results, you are Stan Marsh.")
     elif c_answer > a_answer and c_answer > b_answer and c_answer > d_answer:
-        print(f"{named}, based on your results, you are Randy Marsh.")
+        print(f"{named}, based on your results, you are Kyle Broflovski.")
     elif d_answer > a_answer and d_answer > b_answer and d_answer > c_answer:
-        print(f"{named}, based on your results, you are Butters Stotch.")
+        print(f"{named}, based on your results, you are Kenny McCormick.")
     else:
         print("You have not entered the appropriate answers, please try again.")
 
