@@ -11,8 +11,8 @@ d_answer = 0
 """
 Collects players name and welcomes them to the quiz.
 """
-print("Welcome to the quiz. This quiz is to tell you which South Park character you are\n")
-named = input("To begin, please enter your name: ")
+print("Welcome, this quiz is to tell you which South Park character you are\n")
+named = input("To begin, please enter your name: ").capitalize()
 if named.isalpha() is False:
     print("Invalid, only letters are allowed!")
     sys.exit()
@@ -287,3 +287,9 @@ for x in range(5):
 
 
 calculate_personality()
+
+
+# To do
+# 1. Deploy
+# 2. Complete readme
+# 3. put in python validator
