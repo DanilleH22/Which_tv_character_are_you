@@ -21,7 +21,14 @@ The site aims to enterain the fans of the TV show South Park. The user would ans
 ## Deployment
 
 The site was deployed to Heroku. The steps to deploying to Heroku are:
-* In Heroku 
+* In Heroku home page click create new app
+* I put a unique name for the project
+* I have then added a build pack for Python, wbihc was Python and Node.js
+* In the deployment section, a Deployment method was selected which was GitHub.
+* The Github Repository was the connected, searching for the reposirtory name used on Github.
+* Next enable Automatic Deploy was enabled
+
+The Deployed web application libnk can be found here: 
 
 ## Credits
 
