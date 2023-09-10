@@ -1,6 +1,7 @@
 import gspread
 import random
 import sys
+import pprint
 
 a_answer = 0
 b_answer = 0
@@ -160,7 +161,7 @@ questions = [
         ]
     },
     {
-        "question": "ow do you react to authority figures in your life?",
+        "question": "How do you react to authority figures in your life?",
         "answers": [
             "a. Rebel and question their authority",
             "b. Follow their rules and advice",
@@ -235,21 +236,22 @@ def check_answer():
         global d_answer
         d_answer += 4
     else:
-        input("\nInvalid input. Please only type either a, b, c, or d: ")
-        if user_answer == 'a':
+        invalid_answer = input("\nInvalid input. Please only type either a, b, c, or d: ")
+        if invalid_answer == 'a':
             a_answer += 1
-            print("\nThank you.\n")
-        elif user_answer == 'b':
+            print("Thank you\n")
+        elif invalid_answer == 'b':
             b_answer += 2
-            print("\nThank you.\n")
-        elif user_answer == 'c':
+            print("Thank you\n")
+        elif invalid_answer == 'c':
             c_answer += 3
-            print("\nThank you.\n")
-        elif user_answer == 'd':
+            print("Thank you\n")
+        elif invalid_answer == 'd':
             d_answer += 4
-            print("\nThank you.\n")
+            print("Thank you\n")
         else:
-            print("\nInvalid input.\n")
+            print("Invalid input. \n")
+        
 
 
 def main_function():
