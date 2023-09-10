@@ -289,6 +289,8 @@ for x in range(5):
 calculate_personality()
 
 # Repeats quiz - when function. completes doesn't repeat
+
+
 def repeat_quiz():
     startOver = input("Would you like to play again, type (yes/no):")
     if startOver == 'yes':
@@ -298,11 +300,9 @@ def repeat_quiz():
         startOver
     else:
         print("Thanks for playing, bye.")
-    
+
 
 repeat_quiz()
-
-breakpoint()
 
 # To do
 # 1. Deploy
