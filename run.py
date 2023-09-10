@@ -7,11 +7,24 @@ b_answer = 0
 c_answer = 0
 d_answer = 0
 
+print("We have three quizes for you to choose from: \n 1) South Park \n 2) Golden Girls \n 3) Sex in the City \n 4) Girlfriends.\n")
+which_quiz = input("Which quiz would you like? Please input 1, 2, 3, or 4: ")
+if which_quiz == '1':
+    print("Beginning South Park quiz.")
+    
+elif which_quiz == '2':
+    print("Beginning Golden Girls quiz.")
+elif which_quiz == '3':
+    print("Beginning Sex in the City quiz.")
+elif which_quiz == '4':
+    print("Beginning Girlfriends quiz.")
+else:
+    input("Invalid input, that is not one fo the options. Please choose from (1, 2, 3, 4):")
 
 """
 Collects players name and welcomes them to the quiz.
 """
-print("Welcome to the quiz. This quiz is to tell you which South Park character you are\n")
+print("Welcome to the South Park character quiz\n")
 named = input("To begin, please enter your name: ")
 if named.isalpha() is False:
     print("Invalid, only letters are allowed!")
@@ -27,37 +40,37 @@ questions = [
     {
         "question": "What's your sense of humor like?",
         "answers": [
-            "a. Dark and cynical",
-            "b. Sarcastic and witty",
-            "c. Outrageously absurd",
-            "d. Innocently naive"
+            "a. Sarcastic",
+            "b. Slapstick",
+            "c. Witty",
+            "d. Dark and twisted"
         ]
     },
     {
-        "question": "How do you handle conflicts with friends?",
+        "question": "What's your preferred mode of transportation?",
         "answers": [
-            "a. Manipulate and scheme",
-            "b. Be the voice of reason",
-            "c. Get caught up in ridiculous adventures",
-            "d. Try to keep the peace"
+            "a. Car",
+            "b. Walking",
+            "c. Bicycle",
+            "d. Public Transport"
         ]
     },
     {
-        "question": "Choose a favorite activity during recess:",
+        "question": "Choose a recreational activity:",
         "answers": [
-            "a. Prank others",
-            "b. Play sports or games",
-            "c. Start a bizarre trend",
-            "d. Daydream and imagine fantastical scenarios"
+            "a. Playing video games",
+            "b. Fishing",
+            "c. Skiing/snowboarding",
+            "d. Karaoke"
         ]
     },
     {
-        "question": "What's your attitude towards authority figures?",
+        "question": "What's your favorite food?",
         "answers": [
-            "a. Defy and challenge them",
-            "b. Respect and obey them",
-            "c. Embarrass or mock them",
-            "d. Try to please and impress them"
+            "a. Pizza",
+            "b. Tacos",
+            "c. Burgers",
+            "d. Sushi"
         ]
     },
     {
@@ -70,39 +83,129 @@ questions = [
         ]
     },
     {
-        "question": "How do you react to bizarre or supernatural situations?",
+        "question": "How do you handle conflict?",
         "answers": [
-            "a. Embrace them with excitement",
-            "b. Investigate them logically",
-            "c. Act like a conspiracy theorist",
-            "d. Get easily scared and confused"
+            "a. Confront it head-on",
+            "b. Avoid it at all costs",
+            "c. Seek mediation and compromise",
+            "d. Use humor to defuse tension "
         ]
     },
     {
-        "question": "What's your favorite type of humor?",
+        "question": "Pick a holiday destination:",
         "answers": [
-            "a. Offensive and shock humor",
-            "b. Satirical and observational humor",
-            "c. Absurdist and surreal humor",
-            "d. Innocent and slapstick humor"
+            "a. Beach resort",
+            "b. Cultural city",
+            "c. Ski resort",
+            "d. Remote wilderness"
         ]
     },
     {
-        "question": "Choose a hobby:",
+        "question": "What's your stance on authority figures?",
         "answers": [
-            "a. Collecting and trading items",
-            "b. Playing music or an instrument",
-            "c. Engaging in strange and quirky hobbies ",
-            "d. Doing arts and crafts"
+            "a. Challenge and question ",
+            "b. Respect and Obey",
+            "c. Make fun of them",
+            "d. Ignore them"
+        ]
+    },
+    {
+        "question": "How do you feel about school/work?",
+        "answers": [
+            "a. Try to follow rules and guidelines",
+            "b. Enjoy it",
+            "c. Tolerate it",
+            "d. Dread it"
+        ]
+    },
+    {
+        "question": "What type of pet would you prefer?",
+        "answers": [
+            "a. Snake",
+            "b. Dog",
+            "c. Cat",
+            "d. Hamster"
+        ]
+    },
+    {
+        "question": "What's your favorite TV show genre?",
+        "answers": [
+            "a. Science fiction",
+            "b. Comedy",
+            "c. Drama",
+            "d. Horror"
+        ]
+    },
+    {
+        "question": "What's your preferred way to express your feelings?",
+        "answers": [
+            "a. Manipulate and scheme",
+            "b. Be the voice of reason",
+            "c. Get caught up in ridiculous adventures",
+            "d. Try to keep the peace"
+        ]
+    },
+    {
+        "question": "Choose a favorite activity during recess:",
+        "answers": [
+            "a. Through outbursts and tantrums",
+            "b. Through art",
+            "c. Through speeches and activism",
+            "d. Through music"
+        ]
+    },
+    {
+        "question": "Pick a favorite subject in school:",
+        "answers": [
+            "a. Lunchtim",
+            "b. English adn Writing",
+            "c. math",
+            "d. Recess"
+        ]
+    },
+    {
+        "question": "Choose a superpower:",
+        "answers": [
+            "a. Super strength",
+            "b. Telepaths",
+            "c. Invisibility",
+            "d. Immortal "
+        ]
+    },
+    {
+        "question": "ow do you react to authority figures in your life?",
+        "answers": [
+            "a. Rebel and question their authority",
+            "b. Follow their rules and advice",
+            "c. Seek their approval",
+            "d. Ignore them and do your own thing"
+        ]
+    },
+    {
+        "question": "What's your favorite way to spend free time?",
+        "answers": [
+            "a. Playing video games",
+            "b. Hanging out with friends",
+            "c. Reading books",
+            "d. Going on adventures"
+        ]
+    },
+    {
+        "question": "Pick a favorite South Park episode:",
+        "answers": [
+            "a. Scott Tenorman Must Die",
+            "b. Make Love, Not Warcraft",
+            "c. Imaginationland",
+            "d. The Coon"
         ]
     },
     {
         "question": "What's your approach to problem-solving?",
         "answers": [
             "a. Manipulate and deceive others",
-            "b. Think logically and rationally",
-            "c. Make impulsive and questionable decisions",
-            "d. Try to follow rules and guidelines"
+            "b. Make inpulsive decisions",
+            "c. Try to follow rules and guidelines",
+            "d. Think logically and rationally"
         ]
     },
     {
@@ -148,12 +251,16 @@ def check_answer():
         input("\nInvalid input. Please only type either a, b, c, or d: ")
         if user_answer == 'a':
             a_answer += 1
+            print("\nThank you.\n")
         elif user_answer == 'b':
             b_answer += 2
+            print("\nThank you.\n")
         elif user_answer == 'c':
             c_answer += 3
+            print("\nThank you.\n")
         elif user_answer == 'd':
             d_answer += 4
+            print("\nThank you.\n")
         else:
             print("\nInvalid input.\n")
 
@@ -191,5 +298,5 @@ for x in range(5):
     """
     main_function()
 
-# remove: print("Congrats, you have completed the quiz!\n")
+
 calculate_personality()
