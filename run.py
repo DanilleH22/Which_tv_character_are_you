@@ -7,24 +7,11 @@ b_answer = 0
 c_answer = 0
 d_answer = 0
 
-print("We have three quizes for you to choose from: \n 1) South Park \n 2) Golden Girls \n 3) Sex in the City \n 4) Girlfriends.\n")
-which_quiz = input("Which quiz would you like? Please input 1, 2, 3, or 4: ")
-if which_quiz == '1':
-    print("Beginning South Park quiz.")
-    
-elif which_quiz == '2':
-    print("Beginning Golden Girls quiz.")
-elif which_quiz == '3':
-    print("Beginning Sex in the City quiz.")
-elif which_quiz == '4':
-    print("Beginning Girlfriends quiz.")
-else:
-    input("Invalid input, that is not one fo the options. Please choose from (1, 2, 3, 4):")
 
 """
 Collects players name and welcomes them to the quiz.
 """
-print("Welcome to the South Park character quiz\n")
+print("Welcome to the quiz. This quiz is to tell you which South Park character you are\n")
 named = input("To begin, please enter your name: ")
 if named.isalpha() is False:
     print("Invalid, only letters are allowed!")
