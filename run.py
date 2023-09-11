@@ -307,9 +307,10 @@ def repeat_quiz():
             main_function()
         calculate_personality()
         startOver
-        # change to elif no ==, any letter triggers else
-    else:
+    elif startOver == 'no':
         print("Thanks for playing, bye.")
+    else:
+        print("Invalid Input, game automatically ending.")
 
 
 repeat_quiz()
