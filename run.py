@@ -13,12 +13,16 @@ d_answer = 0
 Collects players name and welcomes them to the quiz.
 """
 print("Welcome, this quiz is to tell you which South Park character you are\n")
-named = input("To begin, please enter your name: ").capitalize()
-if named.isalpha() is False:
-    print("Invalid, only letters are allowed!")
-    sys.exit()
+for retry in range(5):
+    named = input("To begin, please enter your name: ").capitalize()
+    if named.isalpha() is True:
+        print(f"\nWelcome {named}.\n")
+        break
+    elif named.isalpha() is False:
+        print("Invalid, only letters are allowed!\n")
 else:
-    print(f"\nWelcome {named}.\n")
+    print("You have entered too many inavlid input, goodbye.")
+    sys.exit()
 
 
 """
@@ -251,13 +255,12 @@ def check_answer():
             print("Thank you\n")
         else:
             print("Invalid input. \n")
-        
 
 
 def main_function():
     """
-    Chooses random questions and answer to ask and uses checkanswer function
-    to see how many points to give.
+    Chooses random questions and answer to ask and uses
+    checkanswer function to see how many points to give.
     """
     random_question = random.choice(questions)
     question_answer(random_question)
@@ -294,19 +297,19 @@ calculate_personality()
 
 
 def repeat_quiz():
-    startOver = input("Would you like to play again, type (yes/no):")
+    """
+    Asks player if they would like to repeat the quiz,
+    and repeats if yes
+    """
+    startOver = input("Would you like to play again, type (yes/no): ")
     if startOver == 'yes':
         for x in range(5):
             main_function()
         calculate_personality()
         startOver
+        # change to elif no ==, any letter triggers else
     else:
         print("Thanks for playing, bye.")
 
 
 repeat_quiz()
-
-# To do
-# 1. Deploy
-# 2. Complete readme
-# 3. put in python validator
