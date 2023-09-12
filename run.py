@@ -273,7 +273,9 @@ def calculate_personality():
     elif d_answer > a_answer and d_answer > b_answer and d_answer > c_answer:
         print(f"{named}, based on your results, you are Kenny McCormick.\n")
     else:
-        print("You have not entered the appropriate answers, please try again.")
+        print(
+            "You have not entered the appropriate answers, please try again."
+        )
 
 
 def repeat_quiz():
@@ -303,5 +305,6 @@ def main_function():
         check_answer()
     calculate_personality()
     repeat_quiz()
+
 
 main_function()
