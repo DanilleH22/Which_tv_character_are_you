@@ -284,6 +284,8 @@ def calculate_personality():
         print("You have not entered the appropriate answers, please try again.")
 
 
+x = []
+
 for x in range(5):
     """
     Prints 5 questions and answer to ask before printing personality type
@@ -293,8 +295,6 @@ for x in range(5):
 
 calculate_personality()
 
-# Repeats quiz - when function. completes doesn't repeat
-
 
 def repeat_quiz():
     """
@@ -303,9 +303,10 @@ def repeat_quiz():
     """
     startOver = input("Would you like to play again, type (yes/no): ")
     if startOver == 'yes':
-        main_function()
+        for start in range(5):
+            main_function()
         calculate_personality()
-        startOver
+        return startOver
     elif startOver == 'no':
         print("Thanks for playing, bye.")
     else:
