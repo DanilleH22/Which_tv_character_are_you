@@ -7,22 +7,25 @@ b_answer = 0
 c_answer = 0
 d_answer = 0
 invalid_answer = 0
+named = ""
 
 
-"""
-Collects players name and welcomes them to the quiz.
-"""
-print("Welcome, this quiz is to tell you which South Park character you are")
-for retry in range(5):
-    named = input("\nTo begin, please enter your name: ").capitalize()
-    if named.isalpha() is True:
-        print(f"\nWelcome {named}.\n")
-        break
-    elif named.isalpha() is False:
-        print("Invalid, only letters are allowed!\n")
-else:
-    print("You have entered too many inavlid input, goodbye.")
-    sys.exit()
+def welcome():
+    """
+    Collects players name and welcomes them to the quiz.
+    """
+    global named
+    print("\nWelcome, let's find what South Park Character you are.")
+    for _ in range(5):
+        named = input("\nTo begin, please enter your name: ").capitalize()
+        if named.isalpha() is True:
+            print(f"\nWelcome {named}.\n")
+            break
+        elif named.isalpha() is False:
+            print("Invalid, only letters are allowed!\n")
+    else:
+        print("You obviously can't follow simple instructions, goodbye.")
+        sys.exit()
 
 
 """
@@ -256,16 +259,6 @@ def break_check_answer():
         return check_answer()
 
 
-def main_function():
-    """
-    Chooses random questions and answer to ask and uses
-    checkanswer function to see how many points to give.
-    """
-    random_question = random.choice(questions)
-    question_answer(random_question)
-    check_answer()
-
-
 def calculate_personality():
     """
     Checks total score to decide which character they are.
@@ -283,18 +276,6 @@ def calculate_personality():
         print("You have not entered the appropriate answers, please try again.")
 
 
-x = []
-
-for x in range(5):
-    """
-    Prints 5 questions and answer to ask before printing personality type
-    """
-    main_function()
-
-
-calculate_personality()
-
-
 def repeat_quiz():
     """
     Asks player if they would like to repeat the quiz,
@@ -302,9 +283,7 @@ def repeat_quiz():
     """
     startOver = input("Would you like to play again, type (yes/no): ")
     if startOver == 'yes':
-        for start in range(5):
-            main_function()
-        calculate_personality()
+        main_function()
         return startOver
     elif startOver == 'no':
         print("Thanks for playing, bye.")
@@ -312,4 +291,17 @@ def repeat_quiz():
         print("Invalid Input, game automatically ending.")
 
 
-repeat_quiz()
+def main_function():
+    """
+    Chooses random questions and answer to ask and uses
+    checkanswer function to see how many points to give.
+    """
+    welcome()
+    for _ in range(5):
+        random_question = random.choice(questions)
+        question_answer(random_question)
+        check_answer()
+    calculate_personality()
+    repeat_quiz()
+
+main_function()
