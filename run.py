@@ -12,9 +12,9 @@ d_answer = 0
 """
 Collects players name and welcomes them to the quiz.
 """
-print("Welcome, this quiz is to tell you which South Park character you are\n")
+print("Welcome, this quiz is to tell you which South Park character you are")
 for retry in range(5):
-    named = input("To begin, please enter your name: ").capitalize()
+    named = input("\nTo begin, please enter your name: ").capitalize()
     if named.isalpha() is True:
         print(f"\nWelcome {named}.\n")
         break
@@ -273,13 +273,13 @@ def calculate_personality():
     Prints name if certain answers were collected.
     """
     if a_answer > b_answer and a_answer > c_answer and a_answer > d_answer:
-        print(f"{named}, based on your results, you are Eric Cartman.")
+        print(f"{named}, based on your results, you are Eric Cartman.\n")
     elif b_answer > a_answer and b_answer > c_answer and b_answer > d_answer:
-        print(f"{named}, based on your results, you are Stan Marsh.")
+        print(f"{named}, based on your results, you are Stan Marsh.\n")
     elif c_answer > a_answer and c_answer > b_answer and c_answer > d_answer:
-        print(f"{named}, based on your results, you are Kyle Broflovski.")
+        print(f"{named}, based on your results, you are Kyle Broflovski.\n")
     elif d_answer > a_answer and d_answer > b_answer and d_answer > c_answer:
-        print(f"{named}, based on your results, you are Kenny McCormick.")
+        print(f"{named}, based on your results, you are Kenny McCormick.\n")
     else:
         print("You have not entered the appropriate answers, please try again.")
 
@@ -303,8 +303,7 @@ def repeat_quiz():
     """
     startOver = input("Would you like to play again, type (yes/no): ")
     if startOver == 'yes':
-        for x in range(5):
-            main_function()
+        main_function()
         calculate_personality()
         startOver
     elif startOver == 'no':
