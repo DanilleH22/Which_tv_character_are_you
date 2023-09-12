@@ -1,4 +1,3 @@
-import gspread
 import random
 import sys
 import pprint
@@ -7,6 +6,7 @@ a_answer = 0
 b_answer = 0
 c_answer = 0
 d_answer = 0
+invalid_answer = 0
 
 
 """
@@ -240,21 +240,20 @@ def check_answer():
         global d_answer
         d_answer += 4
     else:
-        invalid_answer = input("\nInvalid input. Please only type either a, b, c, or d: ")
-        if invalid_answer == 'a':
-            a_answer += 1
-            print("Thank you\n")
-        elif invalid_answer == 'b':
-            b_answer += 2
-            print("Thank you\n")
-        elif invalid_answer == 'c':
-            c_answer += 3
-            print("Thank you\n")
-        elif invalid_answer == 'd':
-            d_answer += 4
-            print("Thank you\n")
-        else:
-            print("Invalid input. \n")
+        print("\nInvalid input. Please try again.")
+        global invalid_answer
+        invalid_answer += 1
+        break_check_answer()
+
+
+def break_check_answer():
+    if invalid_answer == 5:
+        print(
+            "You obviously don't understand how to play the game. " +
+            "Goodbye.")
+        sys.exit()
+    else:
+        return check_answer()
 
 
 def main_function():
