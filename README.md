@@ -19,13 +19,13 @@ To play the game is simple the steps are told below:
 ## Features
 
 * Enter your name
-![Enter your name](/assets/images/enter_name)
+![Enter your name](/assets/images/enter_name.png)
 
 * Question and four multiple choice answers
-![Question and Answer](/assets/images/question_answer)
+![Question and Answer](/assets/images/question_answer.png)
 
 *Results and option to repeat game
-![Results and option to repeat](/assets/images/results)
+![Results and option to repeat](/assets/images/results.png)
 
 ## Features To Implement
 
