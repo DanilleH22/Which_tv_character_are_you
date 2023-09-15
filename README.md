@@ -9,7 +9,7 @@ The game is targeted for theose who are fans of South Park, which can range from
 ## Features To Implement
 
 * In the future a feature I would like to implement is the users can choose which game they would like to play, for instace they could choose to find out which Simpson character they are.
-* Another feature I would like to implement would be the results don't just give them one of the main characters , but also any side characters in the show.
+* Another feature I would like to implement would be the results don't just give them one of the main characters, but also any side characters in the show.
 
 ## Testing
 
@@ -17,9 +17,11 @@ The game is targeted for theose who are fans of South Park, which can range from
 
 - The first input is for the name, in the welcome function. If the user enters symbols or numbers, anything that is not letters, they will be told it is invalid. It has been checked that if they can not do so after five attempts the game ends.
 - Another test from the name input would be if after failing to put in a valid name, but putting a successful input it progresses, which it does.
+
 - The second input is to chcek the user has put in the correct letter for the questions. The input has been checked to make sure it can only accept; a, b, c, d, in lowercase or capital. 
 - It has also been checked to make sure that if the user does input a invalid letter, symbol or number they are given a chance to put in one of the correct letters. It has been checked that if they can not do so after five attempts the game ends.
 - It has also been checked that if they have put a invalid input, then put a valid input the game continues. 
+
 - The third input is for repeat quiz to start the game over. The input has been checked to make sure it only accepts yes or no, if a yes or y is given the game restarts. It has been checked that if a no or n is put the game ends. 
 - It has been checked that if the user puts anyhing other than yes or no, y/n, the question is repeated, until thhey choose. one of the two.
 
@@ -39,7 +41,7 @@ The game is targeted for theose who are fans of South Park, which can range from
 ## Deployment
 
 The sites initial deployment steps:
-* The Github repository was created from the Code Institute repsotiory template. 
+* The Github repository was created from the Code Institute repository template. 
 * Then a workspace had been opened in Codeanywhere.
 * Once completed and opened the intial commit was added, committed and pushed to the Github repository.
 * Throughout the process of creating the code, git add/commit/push was used.
@@ -47,8 +49,8 @@ The sites initial deployment steps:
 The site was deployed to Heroku. The steps to deploying to Heroku are:
 * Installed dependencies in requirements.txt.
 * In Heroku home page click create new app.
-* I put a unique name for the project.
-* I have then added a build pack for Python, wbihc was Python and Node.js.
+* Then a unique name was created for the project.
+* Then a build pack for Python was created, which was Python and Node.js.
 * In the deployment section, a Deployment method was selected which was GitHub.
 * The Github Repository was the connected, searching for the reposirtory name used on Github.
 * Next enable Manual Deploy and Automatic Deploy.
