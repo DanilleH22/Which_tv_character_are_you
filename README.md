@@ -19,13 +19,19 @@ To play the game is simple the steps are told below:
 ## Features
 
 * Enter your name
-![Enter your name](/assets/images/enter_name.png)
+    - Users can enter their name.
+![Enter your name](assets/images/enter_name.png)
 
 * Question and four multiple choice answers
-![Question and Answer](/assets/images/question_answer.png)
+    - Users get given four questions.
+    - Users have an option of four answers to choose from.
+    - Users are shown the letter choices
+![Question and Answer](assets/images/question_answer.png)
 
-*Results and option to repeat game
-![Results and option to repeat](/assets/images/results.png)
+* Results and option to repeat game
+    - Users results are calculated and told.
+    - USers are asked if they would like to play again.
+![Results and option to repeat](assets/images/results.png)
 
 ## Features To Implement
 
