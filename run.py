@@ -98,10 +98,10 @@ def repeat_quiz():
     and repeats if yes
     """
     startOver = input("Would you like to play again, type (yes/no) or (y/n): ")
-    if startOver == 'yes' or 'y':
+    if startOver == 'yes' or startOver == 'y':
         main_function()
         return startOver
-    elif startOver == 'no' or 'n':
+    elif startOver == 'no' or startOver == 'n':
         print("Thanks for playing, bye.")
     else:
         print("Invalid Input, game automatically ending.")
