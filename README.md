@@ -42,15 +42,18 @@ To play the game is simple the steps are told below:
 
 * The code has three inputs:
 
-- The first input is for the name, in the welcome function. If the user enters symbols or numbers, anything that is not letters, they will be told it is invalid. It has been checked that if they can not do so after five attempts the game ends.
-- Another test from the name input would be if after failing to put in a valid name, but putting a successful input it progresses, which it does.
+* The first input is for the name, in the welcome function. 
+    * If the user enters symbols or numbers, anything that is not letters, they will be told it is invalid. It has been checked that if they can not do so after five attempts the game ends.
+    * Another test from the name input would be if after failing to put in a valid name, but putting a successful input it progresses, which it does.
 
-- The second input is to chcek the user has put in the correct letter for the questions. The input has been checked to make sure it can only accept; a, b, c, d, in lowercase or capital. 
-- It has also been checked to make sure that if the user does input a invalid letter, symbol or number they are given a chance to put in one of the correct letters. It has been checked that if they can not do so after five attempts the game ends.
-- It has also been checked that if they have put a invalid input, then put a valid input the game continues. 
+* The second input is to chcek the user has put in the correct letter for the questions. 
+    * The input has been checked to make sure it can only accept; a, b, c, d, in lowercase or capital. 
+    * It has also been checked to make sure that if the user does input a invalid letter, symbol or number they are given a chance to put in one of the correct letters. It has been checked that if they can not do so after five attempts the game ends.
+    * It has also been checked that if they have put a invalid input, then put a valid input the game continues. 
 
-- The third input is for repeat quiz to start the game over. The input has been checked to make sure it only accepts yes or no, if a yes or y is given the game restarts. It has been checked that if a no or n is put the game ends. 
-- It has been checked that if the user puts anyhing other than yes or no, y/n, the question is repeated, until thhey choose. one of the two.
+* The third input is for repeat quiz to start the game over. 
+    * The input has been checked to make sure it only accepts yes or no, if a yes or y is given the game restarts. It has been checked that if a no or n is put the game ends. 
+    * It has been checked that if the user puts anyhing other than yes or no, y/n, the question is repeated, until thhey choose. one of the two.
 
 * The code had tested to make sure that it generates 5 random questions, without repeating the same questions in one game.
 
