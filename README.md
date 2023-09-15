@@ -4,9 +4,11 @@ The purpoose of the website is to allow the users to find out which tv charcter 
 
 The game is targeted for theose who are fans of South Park, which can range from 21+. The users would like this as the questions do not tend to repeat themself, so each game they will randomly get a question, whiich could lead them to getting a new character each time. This is good for palying on your break or just passing the time.
 
+![AM I Responsive Image](assets/images/responsive.png)
+
 ## Features To Implement
 
-* *n the future a feature I would like to implement is the users can choose which game they would like to play, for instace they could choose to find out which Simpson character they are.
+* In the future a feature I would like to implement is the users can choose which game they would like to play, for instace they could choose to find out which Simpson character they are.
 * Another feature I would like to implement would be the results don't just give them one of the main characters , but also any side characters in the show.
 
 ## Testing
@@ -26,7 +28,9 @@ The game is targeted for theose who are fans of South Park, which can range from
 ### Validator Testing
 
 * To validate the code breakpoint() had been used for the whole code.
-* Another way to test the code was it had been put through the Code Institute PEP8 linter validator.(Insert image here)
+* Another way to test the code was it had been put through the Code Institute PEP8 linter validator.
+![PEP8 Linter validator](assets/images/pep8_linter.png)
+* Throughout the process of creating the code the problems tab in Codeanywhere had been checked to make sure not problems were detected.
 
 ### Unfixed Bugs
 
@@ -41,13 +45,13 @@ The sites initial deployment steps:
 * Throughout the process of creating the code, git add/commit/push was used.
 
 The site was deployed to Heroku. The steps to deploying to Heroku are:
-* Installed dependencies in requirements.txt
-* In Heroku home page click create new app
-* I put a unique name for the project
-* I have then added a build pack for Python, wbihc was Python and Node.js
+* Installed dependencies in requirements.txt.
+* In Heroku home page click create new app.
+* I put a unique name for the project.
+* I have then added a build pack for Python, wbihc was Python and Node.js.
 * In the deployment section, a Deployment method was selected which was GitHub.
 * The Github Repository was the connected, searching for the reposirtory name used on Github.
 * Next enable Manual Deploy and Automatic Deploy.
 
-The Deployed web application libnk can be found here: [Deployed Website](https://which-tv-character-are-you-86f095b68cfc.herokuapp.com/)
+The Deployed web application link can be found here: [Deployed Website](https://which-tv-character-are-you-86f095b68cfc.herokuapp.com/)
 
