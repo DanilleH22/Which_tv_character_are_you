@@ -1,10 +1,31 @@
 # Which Tv Character Are You?
 
+Which Tv Character Are You is a P|ython Terminal game to find out which Tv chacater you are, it currently runs on the Code Institute mock Terminal deployed in Heroku.
+
 The purpoose of the website is to allow the users to find out which tv charcter they are. The site currently only allows for them to answer questions which can tell them which main South Park character they are. 
 
 The game is targeted for theose who are fans of South Park, which can range from 21+. The users would like this as the questions do not tend to repeat themself, so each game they will randomly get a question, whiich could lead them to getting a new character each time. This is good for palying on your break or just passing the time.
 
 ![AM I Responsive Image](assets/images/responsive.png)
+
+## How To Play
+
+To play the game is simple the steps are told below:
+* Enter you name.
+* Choose from options a, b, c, d ( and inly from those four letters).
+* After completing five questions you are given the name of which tv character you are.
+* You are then given an option to play again.
+
+## Features
+
+* Enter your name
+![Enter your name](/assets/images/enter_name)
+
+* Question and four multiple choice answers
+![Question and Answer](/assets/images/question_answer)
+
+*Results and option to repeat game
+![Results and option to repeat](/assets/images/results)
 
 ## Features To Implement
 
@@ -34,9 +55,16 @@ The game is targeted for theose who are fans of South Park, which can range from
 ![PEP8 Linter validator](assets/images/pep8_linter.png)
 * Throughout the process of creating the code the problems tab in Codeanywhere had been checked to make sure not problems were detected.
 
+### Solved Bugs
+A bug that had to be fixed was the user only got five chances to give an incorrect answer in total, so even after getting a correct answer the loop had not started again. To fix this I had deleted a the break_check_answer function and put it at the end of check_answer, whilst putting the invalid_answer = 0 with each if and elif.
+
+Another bug that had been found ws that users could put in symbols for the name. To fix this bug a for loop was created to give them 5 chnaces and .isaplha() was used to make sure that only letters were put in place, whilst informing the user only letters allowed.
+
+Another bug that hd been fixed is when askign users if they would like to play again, yes would play the game again , but any other letter was no. I wanted only for no to be accepted. To fix this I had added an if/elif/else statement.
+
 ### Unfixed Bugs
 
-* To the best of my knowledge, no bugs have been left unfixed.
+To the best of my knowledge, no bugs have been left unfixed.
 
 ## Deployment
 
@@ -57,3 +85,7 @@ The site was deployed to Heroku. The steps to deploying to Heroku are:
 
 The Deployed web application link can be found here: [Deployed Website](https://which-tv-character-are-you-86f095b68cfc.herokuapp.com/)
 
+## Credits 
+
+* Code Institute Terminal in Heroku was used to deploy the Python
+* To create the questions ChatGPT was used.
