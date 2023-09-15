@@ -42,34 +42,35 @@ def check_answer():
     collects answer from the user, and checks if it is
     either a,b,c,d and gives a point
     """
-    user_answer = input("\nEnter your answer (a, b, c, or d): ").lower()
-    if user_answer == 'a':
-        global a_answer
-        a_answer += 1
-    elif user_answer == 'b':
-        global b_answer
-        b_answer += 2
-    elif user_answer == 'c':
-        global c_answer
-        c_answer += 3
-    elif user_answer == 'd':
-        global d_answer
-        d_answer += 4
-    else:
-        print("\nInvalid input. Please try again.")
-        global invalid_answer
-        invalid_answer += 1
-        break_check_answer()
+    global a_answer, b_answer, c_answer, d_answer, invalid_answer
 
-
-def break_check_answer():
-    if invalid_answer == 5:
-        print(
-            "You obviously don't understand how to play the game. " +
-            "Goodbye.")
-        sys.exit()
-    else:
-        return check_answer()
+    while True:
+        user_answer = input("\nEnter your answer (a, b, c, or d): ").lower()
+        if user_answer == 'a':
+            a_answer += 1
+            invalid_answer = 0
+            break
+        elif user_answer == 'b':
+            b_answer += 2
+            invalid_answer = 0
+            break
+        elif user_answer == 'c':
+            c_answer += 3
+            invalid_answer = 0
+            break
+        elif user_answer == 'd':
+            d_answer += 4
+            invalid_answer = 0
+            break
+        else:
+            invalid_answer += 1
+            if invalid_answer <= 4:
+                print("\nInvalid input. Please try again.")
+            elif invalid_answer == 5:
+                print(
+                    "You obviously don't understand how to play the game. " +
+                    "Goodbye.")
+                sys.exit()
 
 
 def calculate_personality():
@@ -111,6 +112,7 @@ def main_function():
     Chooses random questions and answer to ask and uses
     checkanswer function to see how many points to give.
     """
+
     welcome()
     for _ in range(5):
         random_question = random.choice(questions)
